@@ -13,8 +13,8 @@ export class UserController{
     }
 
     @Post('/users')
-    createUser(@Body() createUsetDto: CreateUserDto) {
-        return this.userService.create(createUsetDto)
+    createUser(@Body() createUserDto: CreateUserDto) {
+        return this.userService.create(createUserDto)
     }
 
     @Patch('/users/:userId') 
