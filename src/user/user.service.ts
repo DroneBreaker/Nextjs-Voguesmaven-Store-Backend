@@ -17,7 +17,7 @@ export class UserService{
         return this.userRepository.save(createUserDto)
     }
 
-    getUser(id: number ) {
+    getUser(id: number) {
         return this.userRepository.findOne({where: { id }})
     }
 

@@ -1,6 +1,7 @@
 import { Product } from "src/product/product.entity";
-import { Column, CreateDateColumn, DeleteDateColumn, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
+@Entity()
 export class Category {
     @PrimaryGeneratedColumn()
     id: number
@@ -8,7 +9,7 @@ export class Category {
     @Column()
     name: string
 
-    @OneToMany(() => Product, (product) => product.category)
+    @OneToMany(() => Product, (product) => product)
     products: Product
 
     @CreateDateColumn()

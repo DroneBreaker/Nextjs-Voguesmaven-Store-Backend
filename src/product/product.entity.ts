@@ -9,7 +9,8 @@ export class Product {
     @Column()
     name: string
     
-    @ManyToOne(() => Category, (category) => category.products)
+    
+    @ManyToOne(() => Category, (category) => category.name)
     category: Category
 
     @Column()

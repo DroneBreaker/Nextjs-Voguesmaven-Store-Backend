@@ -20,8 +20,7 @@ import { CategoryModule } from './categories/category.module';
     username: 'root',
     password: 'thezombies',
     database: 'voguedb',
-    // entities: [User, Product, Category],
-    autoLoadEntities: true,
+    entities: [User, Product, Category],
     synchronize: true
   })],
   controllers: [AppController],
