@@ -14,6 +14,9 @@ export class Product {
     category: Category
 
     @Column()
+    image: string
+
+    @Column()
     description: string
 
     @Column()

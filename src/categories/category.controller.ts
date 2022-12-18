@@ -27,7 +27,7 @@ export class CategoryController {
         return this.categoryService.updateById(updateCategoriesDto, categoriesId)
     }
 
-    @Delete()
+    @Delete('/categories/:categoriesId')
     deleteCategories(@Param('categoriesId', ParseIntPipe) categoriesId: number) {
         return this.categoryService.deleteById(categoriesId)
     }
